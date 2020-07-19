@@ -1,0 +1,41 @@
+drop database lms;
+Create database lms;
+Use lms;
+Create table librarians(
+Email varchar(50) primary key,
+ password varchar(50));
+INSERT INTO LIBRARIANS VALUES
+('aakarsh@gmail.com','92100607986y8'),
+('satansh@gmail.com','098767567cv'),
+('gulati56@gmail.com','7865746mn');
+Create table teachers(
+Email varchar(50) primary key,
+ password varchar(50));
+INSERT INTO TEACHERS VALUES
+('arunkumar@gmail.com','34577678kl'),
+('rajgoyal','678965467jh'),
+('jasminmerchant','547688976kj');
+Create table student(
+Email varchar(50) primary key,
+ password varchar(50));
+INSERT INTO STUDENT VALUES
+('vanshitayadav@yahoo.com','504578609km'),
+('ayushibatra@gmail.com','5487609jh'),
+('asthagill@yahoo.com','5478643hb');
+Create table books(
+Name varchar(50),
+Code varchar(20) primary key,
+Author varchar(50),
+Cost varchar(8),
+NoOfPages varchar(5));
+INSERT INTO BOOKS VALUES
+('PRADEEP PHYSICS CLASS 12', '8760', 'G.L. GOMBER', '800.0', '1024'),
+('O.P. TANDON CHEMISTRY JEE', '7890','Dr. OP TANDON', '1500.0', '2004'),
+('R.D. SHARMA MATHS CLASS 12','5540','R.D. SHARMA','400.0','589');
+CREATE TABLE issuedBooks(
+UserId varchar(50),
+Code varchar(50) primary key);
+INSERT INTO issuedBooks VALUES
+('arunkumar@gmail.com','5540'),
+('jasminmerchant','7890'),
+('vanshitayadav@yahoo.com','8760');
